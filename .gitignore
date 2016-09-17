@@ -1,3 +1,5 @@
 node_modules
 dist
 tmp
+www/js
+www/css
