@@ -1,0 +1,27 @@
+{
+  "name": "frontend-starter",
+  "version": "1.0.0",
+  "description": "frontend starter boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp lint"
+  },
+  "author": "Jeremy Rajan",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.1.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-import": "^1.15.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
+    "uglify-js": "^2.7.3",
+    "webpack": "^1.13.2"
+  }
+}
