@@ -4,7 +4,8 @@
   "description": "frontend starter boilerplate",
   "main": "src/index.js",
   "scripts": {
-    "test": "gulp lint"
+    "test": "gulp lint",
+    "start": "gulp"
   },
   "author": "Jeremy Rajan",
   "license": "MIT",
