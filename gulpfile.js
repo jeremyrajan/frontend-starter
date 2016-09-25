@@ -9,6 +9,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const del = require('del');
+const runSequence = require('run-sequence');
 
 const ignoredFiles = ['./www/!index.html'];
 const deleteFiles = ['./www/css', './www/js'];
@@ -68,8 +69,14 @@ gulp.task('server', () => {
 
 gulp.task('reload', () => browserSync.reload());
 
-gulp.task('default', ['clean', 'lint', 'build', 'styles', 'server'], () => {
-  gulp.watch([path.join(__dirname, 'src', '*.*'), path.join(__dirname, 'styles', '*.*')], ['clean', 'lint', 'build', 'styles', 'reload']);
+gulp.task('watch', () => {
+  gulp.watch([path.join(__dirname, 'src', '*.*'), path.join(__dirname, 'styles', '*.*')], () => {
+    runSequence('clean', 'lint', 'build', 'styles', 'reload');
+  });
+});
+
+gulp.task('default', () => {
+  runSequence('clean', 'lint', 'build', 'styles', 'server', 'watch');
 });
 
 gulp.task('release', ['clean', 'lint', 'build:production', 'styles'], () => { });

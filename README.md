@@ -7,8 +7,8 @@ Features:
   4. SASS & commonJS
 
 Todo:
-  1. S3 deploy
-  2. gh-pages deploy
-  3. babel transpiling
-  4. Test Integration (Mocha)
-  5. JSDOC generate
+ - [] S3 deploy
+ - [] gh-pages deploy
+ - [x] babel transpiling
+ - [] Test Integration (Mocha)
+ - [] JSDOC generate
