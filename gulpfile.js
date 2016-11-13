@@ -54,7 +54,16 @@ gulp.task('styles', (done) => {
 gulp.task('build:production', (done) => {
   const webpackProdConfig = Object.assign({}, webpackConfig);
   webpackProdConfig.plugins = [
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
   ];
   webpackBuild(webpackProdConfig, done);
 });
