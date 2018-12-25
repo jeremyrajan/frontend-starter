@@ -1,5 +1,7 @@
 # Frontend apps boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jeremyrajan/frontend-starter.svg)](https://greenkeeper.io/)
+
 Features:
   1. Webpack bundling (dev & release)
   2. eslint (airbnb)
